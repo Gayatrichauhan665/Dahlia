@@ -134,3 +134,29 @@ def tad(x):
     return random.choice(truths)
   elif (x==2):
     return random.choice(dares)
+    
+def sad(x):
+
+	sad_words = ["sad", "depressed", "unhappy", "angry", "miserable","bc", "fuck", "wtf","pgl", "nalayak", "damn it", "wth", "chutiya", "idiot", "stupid"]
+
+	starter_encouragements = [
+    "There There", "U Want..??", "chup ho jao!..koi sun lega!",
+    "Ok ,I get it why joey wanted to rip off his arm so that he has something to throw!!",
+    "ghusse mein fatt mt jana bs :|", "ye kaha fasa diya mujhe:(",
+    "kitne bigad gye ho yr tum..itni gaaliya!", "you're awesome",
+    "hail Gayatri", "don't worry",
+    "soft kitty warm kitty little ball of fur..happy kitty sleepy kitty..pur pur pur..",
+    "wanna have some coffee?..", "why are u so damn hairaan honey?",
+    "ohh just stop being a cry baby!", "lets watch tbbt",
+    "damn it u r cute,be sad!", "don't be sad,kaddu is mad",
+    "dont worry divya will dance", "you're the best", "ufffo!!..bs karo!",
+    "lets have pizza!", "ok even I am sad now  -_- ", "be a bunny!",
+    "ok I m gng to sleep,u feel free to bother me.."]
+	
+	if (x==1):
+		return sad_words
+	elif (x==2):
+		return random.choice(starter_encouragements)	
+
+
+
