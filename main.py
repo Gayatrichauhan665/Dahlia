@@ -86,27 +86,23 @@ async def on_message(message):
 		await message.channel.send(get_joke())
 
 	if msg == "khushi":
-		await message.channel.send(file=discord.File('images/khushi.jpg'))
+		"await message.channel.send(file=discord.File('images/khushi.jpg'))"
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Oye Dibbiya, \n gm babu, Koi bula rha h tumhe ')
 
 	if msg == "guddu":
-		await message.channel.send(file=discord.File('images/guddu.JPG'))
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('guddu aapko koi bula rha h')
 
 	if msg == "deepak":
-		await message.channel.send(file=discord.File('images/deepak.jpg'))
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('deepak ji kaha ho....?')
 
 	if msg == "aurat":
-		await message.channel.send(file=discord.File('images/aurat.JPG'))
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Bhawana ji, nasha utaro and aao')
 
 	if msg == "strange":
-		await message.channel.send(file=discord.File('images/strange.jpg'))
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Strange, someone is calling you sir')
 
