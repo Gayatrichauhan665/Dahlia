@@ -94,6 +94,7 @@ async def on_message(message):
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('guddu aapko koi bula rha h')
 
+
 	if msg == "deepak":
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('deepak ji kaha ho....?')
@@ -132,13 +133,12 @@ async def on_message(message):
 		game = 0
 
 
-@tasks.loop(minutes=120)
+@tasks.loop(minutes=60)
 async def send():
-	test = client.get_channel(int(os.getenv("TEST")))
-	await test.send("kkrh")
-	await test.send("kya sunao? Joke ya Quote..?")
-	await test.send("****Jo bhi ho padhne baitho bc****")
-	await test.send(random.choice(loop))
+	alarm = client.get_channel(int(os.getenv("RM")))
+	await alarm.send("kkrh")
+	await alarm.send("****jo bhi ho padhne baitho****")
+	await alarm.send("Drink water and stretch a little")
 
 
 @send.before_loop
