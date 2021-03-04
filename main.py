@@ -63,9 +63,9 @@ async def on_message(message):
 
 	global game
 
-	word = message.content
+	word = message.content.lower()
 
-	if word == "T&D":
+	if word == "t&d":
 		if game == 0:
 			await message.channel.send("*****lets play TND!!!!*****")
 			await message.channel.send("Truth or Dare")
@@ -99,7 +99,7 @@ async def on_message(message):
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('deepak ji kaha ho....?')
 
-	if msg == "aurat":
+	if msg == "shinu":
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Bhawana ji, nasha utaro and aao')
 
@@ -136,10 +136,7 @@ async def on_message(message):
 @tasks.loop(minutes=60)
 async def send():
 	alarm = client.get_channel(int(os.getenv("RM")))
-	await alarm.send("kkrh")
-	await alarm.send("****jo bhi ho padhne baitho****")
-	await alarm.send("Drink water and stretch a little")
-
+	await alarm.send("Hail Gayatri!!")
 
 @send.before_loop
 async def before():
