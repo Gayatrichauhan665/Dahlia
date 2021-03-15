@@ -105,7 +105,7 @@ async def on_message(message):
 
 	if msg == "strange":
 		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('Strange, someone is calling you sir')
+		await channel.send('Uttho Ullu!!')
 
 	if msg.startswith("search "):
 		s = msg[7:100]
@@ -133,10 +133,10 @@ async def on_message(message):
 		game = 0
 
 
-@tasks.loop(minutes=60)
+@tasks.loop(minutes=120)
 async def send():
 	alarm = client.get_channel(int(os.getenv("RM")))
-	await alarm.send("Hail Gayatri!!")
+	await alarm.send("Don't waste time")
 
 @send.before_loop
 async def before():
