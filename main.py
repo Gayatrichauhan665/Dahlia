@@ -15,10 +15,11 @@ jh = {
     'x-rapidapi-host': "jokeapi.p.rapidapi.com"
 }
 
-sh = {
+imdbh = {
     'x-rapidapi-key': "07e4f878fdmsh8a653e7caf8b089p1587afjsneb326fd7f412",
     'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com"
 }
+
 
 game = int(0)
 
@@ -63,9 +64,9 @@ async def on_message(message):
 
 	global game
 
-	word = message.content
+	word = message.content.lower()
 
-	if word == "T&D":
+	if word == "t&d":
 		if game == 0:
 			await message.channel.send("*****lets play TND!!!!*****")
 			await message.channel.send("Truth or Dare")
@@ -94,22 +95,23 @@ async def on_message(message):
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('guddu aapko koi bula rha h')
 
+
 	if msg == "deepak":
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('deepak ji kaha ho....?')
 
-	if msg == "aurat":
+	if msg == "shinu":
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Bhawana ji, nasha utaro and aao')
 
 	if msg == "strange":
 		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('Strange, someone is calling you sir')
+		await channel.send('Uttho Ullu!!')
 
-	if msg.startswith("search "):
-		s = msg[7:100]
+	if msg.startswith("imdb "):
+		s = msg[5:100]
 		url = "https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + s
-		response = requests.request("GET", url, headers=sh)
+		response = requests.request("GET", url, headers=imdbh)
 		json_data = json.loads(response.text)
 		search = json_data["titles"][0]
 		await message.channel.send(search)
@@ -134,12 +136,8 @@ async def on_message(message):
 
 @tasks.loop(minutes=120)
 async def send():
-	test = client.get_channel(int(os.getenv("TEST")))
-	await test.send("kkrh")
-	await test.send("kya sunao? Joke ya Quote..?")
-	await test.send("****Jo bhi ho padhne baitho bc****")
-	await test.send(random.choice(loop))
-
+	alarm = client.get_channel(int(os.getenv("RM")))
+	await alarm.send("Don't waste time")
 
 @send.before_loop
 async def before():
