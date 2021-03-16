@@ -15,10 +15,11 @@ jh = {
     'x-rapidapi-host': "jokeapi.p.rapidapi.com"
 }
 
-sh = {
+imdbh = {
     'x-rapidapi-key': "07e4f878fdmsh8a653e7caf8b089p1587afjsneb326fd7f412",
     'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com"
 }
+
 
 game = int(0)
 
@@ -107,10 +108,10 @@ async def on_message(message):
 		channel = client.get_channel(int(os.getenv("NT")))
 		await channel.send('Uttho Ullu!!')
 
-	if msg.startswith("search "):
-		s = msg[7:100]
+	if msg.startswith("imdb "):
+		s = msg[5:100]
 		url = "https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + s
-		response = requests.request("GET", url, headers=sh)
+		response = requests.request("GET", url, headers=imdbh)
 		json_data = json.loads(response.text)
 		search = json_data["titles"][0]
 		await message.channel.send(search)
