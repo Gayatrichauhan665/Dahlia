@@ -1,6 +1,7 @@
 # Strange
 Basic discord bot made in python using discord.py
 Made for having fun in the discord server with friends
+Very easy to update data as per your requirements
 
 Features: 
 1) can send inspirational quotes
