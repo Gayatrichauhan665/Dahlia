@@ -2,9 +2,9 @@ import discord
 import os
 import requests
 import json
-import random
 from replit import db
 import userdata
+import help
 import time
 from discord.ext import tasks
 from keep_alive import keep_alive
@@ -78,6 +78,9 @@ async def on_message(message):
 	elif game == 1:
 		td = word
 		msg = "none"
+
+	if msg == "pls help":
+		await message.channel.send(help.commands())
 
 	if msg == "inspire":
 		quote = get_quote()
