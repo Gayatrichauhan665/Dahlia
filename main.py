@@ -89,27 +89,11 @@ async def on_message(message):
 	if msg == "joke":
 		await message.channel.send(get_joke())
 
-	if msg == "khushi":
-		"await message.channel.send(file=discord.File('images/khushi.jpg'))"
-		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('Oye Dibbiya, \n gm babu, Koi bula rha h tumhe ')
-
-	if msg == "guddu":
-		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('guddu aapko koi bula rha h')
-
-
-	if msg == "deepak":
-		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('deepak ji kaha ho....?')
-
-	if msg == "shinu":
-		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('Bhawana ji, nasha utaro and aao')
-
 	if msg == "strange":
+		"await message.channel.send(file=discord.File('images/wait.jpg'))"
 		channel = client.get_channel(int(os.getenv("NT")))
-		await channel.send('Uttho Ullu!!')
+		await channel.send('Someone is calling you sir')
+
 
 	if msg.startswith("imdb "):
 		s = msg[5:100]
