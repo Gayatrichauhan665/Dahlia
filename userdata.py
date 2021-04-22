@@ -137,20 +137,17 @@ def tad(x):
     
 def sad(x):
 
-	sad_words = ["sad", "depressed", "unhappy", "angry", "miserable","bc", "fuck", "wtf","pgl", "nalayak", "damn it", "wth", "chutiya", "idiot", "stupid"]
+	sad_words = ["sad", "depressed", "unhappy", "angry", "damn it", "wth", "idiot", "stupid"]
 
 	starter_encouragements = [
-    "There There", "U Want..??", "chup ho jao!..koi sun lega!",
     "Ok ,I get it why joey wanted to rip off his arm so that he has something to throw!!",
-    "ghusse mein fatt mt jana bs :|", "ye kaha fasa diya mujhe:(",
-    "kitne bigad gye ho yr tum..itni gaaliya!", "you're awesome",
-    "hail Gayatri", "don't worry",
+    "don't worry",
     "soft kitty warm kitty little ball of fur..happy kitty sleepy kitty..pur pur pur..",
-    "wanna have some coffee?..", "why are u so damn hairaan honey?",
+    "wanna have some coffee?..",
     "ohh just stop being a cry baby!", "lets watch tbbt",
-    "damn it u r cute,be sad!", "don't be sad,kaddu is mad",
-    "dont worry divya will dance", "you're the best", "ufffo!!..bs karo!",
-    "lets have pizza!", "ok even I am sad now  -_- ", "be a bunny!",
+    "damn it u r cute,be sad!",
+    "you're the best",
+    "lets have pizza!", "ok even I am sad now  -_- ",
     "ok I m gng to sleep,u feel free to bother me.."]
 	
 	if (x==1):
